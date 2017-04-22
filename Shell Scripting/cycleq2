@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "OS Informtion"
+uname -a
+
+echo "Available Shells: "
+cat /etc/shells
+
+echo "Computer Mouse Information: "
+cat /etc/sysconfig/mouse
+
+echo "Computer CPU Information:"
+cat /proc/cpuinfo
+
+echo "Memory Information:" 
+cat /proc/meminfo
+
+echo "Hard disk information:" 
+echo "Model: `cat /proc/ide/hda/model` "    
+echo "Driver: `cat /proc/ide/hda/driver` "    
+echo "Cache size: `cat /proc/ide/hda/cache` "    
+
+echo "File System (Mount):" 
+cat /proc/mounts
+
