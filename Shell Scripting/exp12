@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Enter Name"
+read x
+echo -n "Reversed : "
+echo "$x" | rev
+echo "Length : " ${#x}

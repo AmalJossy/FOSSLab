@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -n "Enter file 1: "
+read x
+echo -n "Enter file 2: "
+read y
+if [ -f "$y" ]
+then
+	cat "$x" >> "$y"
+else	
+	echo "File not found"
+	cat "$x" > "$y"
+fi
