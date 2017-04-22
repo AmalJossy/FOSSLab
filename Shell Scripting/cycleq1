@@ -1,0 +1,9 @@
+#!/bin/bash
+nouser=`who | wc -l`
+echo "User name: $USER (Logname: $LOGNAME)" 
+echo "Current Shell: $SHELL" 
+echo "Home Directory: $HOME" 
+echo "OS Type: $OSTYPE" 
+echo "PATH: $PATH" 
+echo "Current directory: `pwd`" 
+echo "Currently Logged: $nouser user(s)"
