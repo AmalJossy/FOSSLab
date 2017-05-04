@@ -1,0 +1,106 @@
+﻿perl cycle questions
+
+1. Write a program that reads a list of strings on separate lines until end-of-input
+and prints out the list in reverse order.
+
+
+print "Enter some lines, then press Ctrl-D:\n";
+@lines = <STDIN>;
+@reverse_lines = reverse @lines;
+print @reverse_lines;
+
+2.Make a program that prints each line of its input that mentions fred . (It
+shouldn�t do anything for other lines of input.) It should match alfred and frederick but should'nt match Fred
+
+while (<>) {
+if (/fred/) {
+print;
+}
+}
+
+3.Make a program that prints each line of its input that mentions both fred and Fred
+
+
+while (<>) {
+if (/fred|Fred/) {
+print;
+}
+}
+
+4.Write a perl program to find whether a number is angstrom or not 
+
+print �Enter the number�;
+$n=<>;
+$t=$n;
+$s=0;
+while ($n > 0){
+	$r=$n%10;
+	$i=$r*$r*$r;
+	$s=$s+$i;
+	$n=$n/10;
+}
+if($s == $t){
+	print �Armstrong Number�;
+}
+else{
+	print �Not Armstrong�;
+}
+
+5.write a perl program that prints the details of all files in the current directory created in the month of may
+
+system 'ls -l|grep May';
+
+6.Write a program that reads a string from standard input and prints all words having five or more letters
+
+$array = <STDIN>;
+@array = split /\s+/,$array;
+foreach $word (@array){
+	$_ = $word;
+	if(/.....+/){
+		print "$_ \n";
+	}
+}
+
+7.Write a perl program that reads a string from standard input and prints all words that starts with an 'a'
+
+$array = <STDIN>;
+@array = split /\s+/,$array;
+foreach $word (@array){
+	$_ = $word;
+	if(/^a/){
+		print "$_ \n";
+	}
+}
+
+8.Write a perl program that reads a string from standard input and prints all the words containing a special character
+
+$array = <STDIN>;
+@array = split /\s+/,$array;
+foreach $word (@array){
+	$_ = $word;
+	if(/\W/){
+		print "$_ \n";
+	}
+}
+
+9.Make a program that prints each line that has a word that is capitalized but not all capitalized
+
+$array = <STDIN>;
+@array = split /\s+/,$array;
+foreach $word (@array){
+	$_ = $word;
+	if(/[A-Z][a-z]+/){
+		print "$_ \n";
+	}
+}
+
+10.Make a program that prints each word of its input that contains a period ( . ), ignoring other lines of input.
+
+$array = <STDIN>;
+@array = split /\s+/,$array;
+foreach $word (@array){
+	$_ = $word;
+	if(/\./ == $word){
+		print "$_ \n";
+	}
+}

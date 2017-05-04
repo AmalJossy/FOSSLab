@@ -1,3 +1,3 @@
-REAd thE lInEs frOm AfIlE
-stOrE thEm IntO AnOthEr fIlE
-AftEr cOnvErtIng All vOwEls tO UppErcAsE
+#!/bIn/bAsh
+hEAd $1 > $3
+tAIl $2 >> $3

@@ -6,18 +6,18 @@ uname -a
 echo "Available Shells: "
 cat /etc/shells
 
-echo "Computer Mouse Information: "
+echo "Mouse Information: "
 cat /etc/sysconfig/mouse
 
-echo "Computer CPU Information:"
+echo "CPU Information:"
 cat /proc/cpuinfo
 
 echo "Memory Information:" 
 cat /proc/meminfo
 
 echo "Hard disk information:" 
-echo "Model: `cat /proc/ide/hda/model` "    
-echo "Driver: `cat /proc/ide/hda/driver` "    
+echo "Model: `cat /sys/class/block/sda/device/model` "    
+echo "Size: `cat /sys/class/block/sda/size` "    
 echo "Cache size: `cat /proc/ide/hda/cache` "    
 
 echo "File System (Mount):" 
